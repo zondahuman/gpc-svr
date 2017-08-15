@@ -11,7 +11,7 @@ import com.rpc.mail.SendMailResponse;
 import com.rpc.mail.SendMailServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
-public class SendMailServiceImpl implements SendMailServiceGrpc.SendMailService {
+public class SendMailServiceImpl extends SendMailServiceGrpc.SendMailServiceImplBase {
     public void sendMail(SendMailRequest request, StreamObserver<SendMailResponse> responseObserver) {
         System.out.println(request.getRecipient() + "\t" + request.getTitle() + "\t" + request.getContent());
         //这里是具体的业务逻辑
