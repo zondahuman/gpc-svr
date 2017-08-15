@@ -5,7 +5,7 @@ package com.rpc.mail.server;
  * gpc-svr
  * com.rpc.mail.server
  */
-import com.rpc.mail.SendMailServiceGrpc;
+
 import com.rpc.mail.service.SendMailServiceImpl;
 import io.grpc.Server;
 import io.grpc.netty.NettyServerBuilder;
