@@ -21,7 +21,7 @@ public class GrpcClient {
         SendMailServiceBlockingStub stub = SendMailServiceGrpc.newBlockingStub(channel);
 
         //设置请求参数
-        SendMailRequest param = SendMailRequest.newBuilder().setRecipient("admin@google.com").setTitle("运维邮件").setContent("SOA服务挂了").build();
+        SendMailRequest param = SendMailRequest.newBuilder().setRecipient("admin@google.com").setTitle("Email Title").setContent("This is email content").build();
         SendMailResponse resp = stub.sendMail(param);
         System.out.println(resp.getMsg() + "\t" + resp.getCode());
 
